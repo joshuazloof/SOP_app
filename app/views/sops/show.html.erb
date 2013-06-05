@@ -7,12 +7,12 @@
 
 <p>
   <b>Date created:</b>
-  <%= @sop.date_created %>
+  <%= @sop.date_created.strftime("%m/%d/%y") %>
 </p>
 
 <p>
   <b>Date updated:</b>
-  <%= @sop.date_updated %>
+  <%= @sop.date_updated.strftime("%m/%d/%y") %>
 </p>
 
 <p>
@@ -24,6 +24,32 @@
   <b>Sop owner:</b>
   <%= @sop.SOP_owner %>
 </p>
+
+<table>
+  <tr>
+    <th>Ordernum</th>
+    <th>Instruction</th>
+    <th>Timing</th>
+    <th>Tip</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sop.steps.each do |step| %>
+  <%if step.isCurrent %>
+  <tr>
+    <td><%= step.orderNum %></td>
+    <td><%= step.instruction %></td>
+    <td><%= step.timing %></td>
+    <td><%= step.tip %></td>
+    <td><%= link_to 'Show', step %></td>
+    <td><%= link_to 'Edit', edit_step_path(step) %></td>
+    <td><%= link_to 'Destroy', step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <% end %>
+<% end %>
+</table>
 
 
 <%= link_to 'Edit', edit_sop_path(@sop) %> |
