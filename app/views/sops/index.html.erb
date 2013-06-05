@@ -15,8 +15,8 @@
 <% @sops.each do |sop| %>
   <tr>
     <td><%= sop.name %></td>
-    <td><%= sop.date_created %></td>
-    <td><%= sop.date_updated %></td>
+    <td><%= sop.date_created.strftime("%m/%d/%y") %></td>
+    <td><%= sop.date_updated.strftime("%m/%d/%y") %></td>
     <td><%= sop.version %></td>
     <td><%= sop.SOP_owner %></td>
     <td><%= link_to 'Show', sop %></td>
