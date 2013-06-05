@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ordernum:</b>
+  <%= @step.orderNum %>
+</p>
+
+<p>
+  <b>Instruction:</b>
+  <%= @step.instruction %>
+</p>
+
+<p>
+  <b>Timing:</b>
+  <%= @step.timing %>
+</p>
+
+<p>
+  <b>Tip:</b>
+  <%= @step.tip %>
+</p>
+
+<p>
+  <b>Iscurrent:</b>
+  <%= @step.isCurrent %>
+</p>
+
+<p>
+  <b>Sopid:</b>
+  <%= @step.sop_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_step_path(@step) %> |
+<%= link_to 'Back', steps_path %>

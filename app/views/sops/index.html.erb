@@ -1,0 +1,56 @@
+<h1>Listing sops</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Date created</th>
+    <th>Date updated</th>
+    <th>Version</th>
+    <th>Sop owner</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sops.each do |sop| %>
+  <tr>
+    <td><%= sop.name %></td>
+    <td><%= sop.date_created %></td>
+    <td><%= sop.date_updated %></td>
+    <td><%= sop.version %></td>
+    <td><%= sop.SOP_owner %></td>
+    <td><%= link_to 'Show', sop %></td>
+    <td><%= link_to 'Edit', edit_sop_path(sop) %></td>
+    <td><%= link_to 'Destroy', sop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<table>
+  <tr>
+    <th>Ordernum</th>
+    <th>Instruction</th>
+    <th>Timing</th>
+    <th>Tip</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% sop.steps.each do |step| %>
+  <%if step.isCurrent %>
+  <tr>
+    <td><%= step.orderNum %></td>
+    <td><%= step.instruction %></td>
+    <td><%= step.timing %></td>
+    <td><%= step.tip %></td>
+    <td><%= link_to 'Show', step %></td>
+    <td><%= link_to 'Edit', edit_step_path(step) %></td>
+    <td><%= link_to 'Destroy', step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <% end %>
+<% end %>
+</table>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sop', new_sop_path %>

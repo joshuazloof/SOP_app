@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  orderNum: 1
+  instruction: MyString
+  timing: 1.5
+  tip: MyString
+  isCurrent: false
+  SOPID: 1
+
+two:
+  orderNum: 1
+  instruction: MyString
+  timing: 1.5
+  tip: MyString
+  isCurrent: false
+  SOPID: 1

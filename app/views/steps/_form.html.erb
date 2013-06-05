@@ -1,0 +1,41 @@
+<%= form_for(@step) do |f| %>
+  <% if @step.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@step.errors.count, "error") %> prohibited this step from being saved:</h2>
+
+      <ul>
+      <% @step.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :orderNum %><br />
+    <%= f.number_field :orderNum %>
+  </div>
+  <div class="field">
+    <%= f.label :instruction %><br />
+    <%= f.text_field :instruction %>
+  </div>
+  <div class="field">
+    <%= f.label :timing %><br />
+    <%= f.text_field :timing %>
+  </div>
+  <div class="field">
+    <%= f.label :tip %><br />
+    <%= f.text_field :tip %>
+  </div>
+  <div class="field">
+    <%= f.label :isCurrent %><br />
+    <%= f.check_box :isCurrent %>
+  </div>
+  <div class="field">
+    <%= f.label :sop_id %><br />
+    <%= f.number_field :sop_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

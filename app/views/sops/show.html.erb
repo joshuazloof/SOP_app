@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @sop.name %>
+</p>
+
+<p>
+  <b>Date created:</b>
+  <%= @sop.date_created %>
+</p>
+
+<p>
+  <b>Date updated:</b>
+  <%= @sop.date_updated %>
+</p>
+
+<p>
+  <b>Version:</b>
+  <%= @sop.version %>
+</p>
+
+<p>
+  <b>Sop owner:</b>
+  <%= @sop.SOP_owner %>
+</p>
+
+
+<%= link_to 'Edit', edit_sop_path(@sop) %> |
+<%= link_to 'Back', sops_path %>

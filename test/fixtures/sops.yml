@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  date_created: 2013-06-01 15:37:53
+  date_updated: 2013-06-01 15:37:53
+  version: 9.99
+  SOP_owner: MyString
+
+two:
+  name: MyString
+  date_created: 2013-06-01 15:37:53
+  date_updated: 2013-06-01 15:37:53
+  version: 9.99
+  SOP_owner: MyString
